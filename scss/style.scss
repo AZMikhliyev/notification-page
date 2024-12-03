@@ -1,0 +1,168 @@
+@import "./reset";
+@import "./fonts";
+@import "./variables";
+
+body {
+  background: $body-bg;
+}
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    background: $white;
+    max-width: 730px;
+    box-shadow: 0 20px 60px 0 rgba(73, 97, 168, 0.05);
+    border-radius: 15px;
+    padding: 32px 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    .container-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h1 {
+        font-weight: 800;
+        font-size: $fn1;
+        color: $primary-text;
+        display: flex;
+        align-items: end;
+        gap: 11px;
+        span {
+          border-radius: 6px;
+          width: 32px;
+          height: 25px;
+          background: $link;
+          font-weight: 800;
+          font-size: $fn2;
+          color: $white;
+          padding: 3px 11px 3px;
+        }
+      }
+      h3 {
+        font-weight: 500;
+        font-size: $fn2;
+        text-align: right;
+      }
+    }
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      .card {
+        display: flex;
+        align-items: center;
+        padding: 18px 20px;
+        gap: 19px;
+        border-radius: 8px;
+        img {
+          width: 45px;
+        }
+        .card-content {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          .last-seen {
+            font-weight: 500;
+            font-size: $fn2;
+            color: $last-seen-text;
+          }
+
+          h3 {
+            font-weight: 500;
+            font-size: $fn2;
+            color: $secondary-text;
+            .name {
+              font-weight: 800;
+              font-size: $fn2;
+              color: $primary-text;
+              transition: 0.3s;
+              cursor: pointer;
+              &:hover {
+                color: $link;
+              }
+            }
+            .mark-span {
+              font-weight: 800;
+              font-size: $fn2;
+              color: $secondary-text;
+              transition: 0.3s;
+              cursor: pointer;
+              &:hover {
+                color: $link;
+              }
+            }
+            .jacob-span {
+              font-weight: 800;
+              font-size: $fn2;
+              color: $link;
+              cursor: pointer;
+            }
+            .red-circle {
+              display: inline-block;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background: $red;
+              margin-left: 6px;
+            }
+          }
+        }
+      }
+      .unread {
+        background: $body-bg;
+      }
+      .rizky {
+        display: flex;
+        align-items: start;
+        .card-content {
+          .last-seen {
+            margin-bottom: 13px;
+          }
+          .message-rizky {
+            max-width: 566px;
+            padding: 20px;
+            color: $secondary-text;
+            border: 1px solid $border-color;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+              background: $light-grey-blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (width < 500px) {
+  .wrapper {
+    .container {
+      padding: 24px 16px 29px;
+      .cards {
+        .card {
+          padding: 16px;
+          .card-content {
+            font-size: $fn4;
+            .last-seen{
+              font-size: $fn4;
+            }
+            .name {
+              font-size: 14px;
+            }
+            .mark-span {
+              font-size: $fn4;
+            }
+            .jacob-span {
+              font-size: $fn4;
+            }
+          }
+        }
+      }
+    }
+  }
+}

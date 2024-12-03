@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+button {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+input {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+a {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  background: #f7fafd;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .container {
+  background: #fff;
+  max-width: 730px;
+  box-shadow: 0 20px 60px 0 rgba(73, 97, 168, 0.05);
+  border-radius: 15px;
+  padding: 32px 30px 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 31px;
+}
+.wrapper .container .container-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .container .container-content h1 {
+  font-weight: 800;
+  font-size: 24px;
+  color: #1c202b;
+  display: flex;
+  align-items: end;
+  gap: 11px;
+}
+.wrapper .container .container-content h1 span {
+  border-radius: 6px;
+  width: 32px;
+  height: 25px;
+  background: #0a327b;
+  font-weight: 800;
+  font-size: 16px;
+  color: #fff;
+  padding: 3px 11px 3px;
+}
+.wrapper .container .container-content h3 {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: right;
+}
+.wrapper .container .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.wrapper .container .cards .card {
+  display: flex;
+  align-items: center;
+  padding: 18px 20px;
+  gap: 19px;
+  border-radius: 8px;
+}
+.wrapper .container .cards .card img {
+  width: 45px;
+}
+.wrapper .container .cards .card .card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.wrapper .container .cards .card .card-content .last-seen {
+  font-weight: 500;
+  font-size: 16px;
+  color: #939cad;
+}
+.wrapper .container .cards .card .card-content h3 {
+  font-weight: 500;
+  font-size: 16px;
+  color: #5e6778;
+}
+.wrapper .container .cards .card .card-content h3 .name {
+  font-weight: 800;
+  font-size: 16px;
+  color: #1c202b;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.wrapper .container .cards .card .card-content h3 .name:hover {
+  color: #0a327b;
+}
+.wrapper .container .cards .card .card-content h3 .mark-span {
+  font-weight: 800;
+  font-size: 16px;
+  color: #5e6778;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.wrapper .container .cards .card .card-content h3 .mark-span:hover {
+  color: #0a327b;
+}
+.wrapper .container .cards .card .card-content h3 .jacob-span {
+  font-weight: 800;
+  font-size: 16px;
+  color: #0a327b;
+  cursor: pointer;
+}
+.wrapper .container .cards .card .card-content h3 .red-circle {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f65552;
+  margin-left: 6px;
+}
+.wrapper .container .cards .unread {
+  background: #f7fafd;
+}
+.wrapper .container .cards .rizky {
+  display: flex;
+  align-items: start;
+}
+.wrapper .container .cards .rizky .card-content .last-seen {
+  margin-bottom: 13px;
+}
+.wrapper .container .cards .rizky .card-content .message-rizky {
+  max-width: 566px;
+  padding: 20px;
+  color: #5e6778;
+  border: 1px solid #dde7ee;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.wrapper .container .cards .rizky .card-content .message-rizky:hover {
+  background: #e5effa;
+}
+
+@media (width < 500px) {
+  .wrapper .container {
+    padding: 24px 16px 29px;
+  }
+  .wrapper .container .cards .card {
+    padding: 16px;
+  }
+  .wrapper .container .cards .card .card-content {
+    font-size: 14px;
+  }
+  .wrapper .container .cards .card .card-content .last-seen {
+    font-size: 14px;
+  }
+  .wrapper .container .cards .card .card-content .name {
+    font-size: 14px;
+  }
+  .wrapper .container .cards .card .card-content .mark-span {
+    font-size: 14px;
+  }
+  .wrapper .container .cards .card .card-content .jacob-span {
+    font-size: 14px;
+  }
+}/*# sourceMappingURL=style.css.map */
